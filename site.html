@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Site</title>
+        <link rel="shortcut icon" href="website.png">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+ 				background-color: #84e3d8;
+			}
+			header{
+				font-family: Cuprum, Arial, Helvetica, sans-serif;
+			}
+			.dws-menu *{
+				margin: 0;
+				padding: 0;
+			}
+			.dws-menu ul,
+			.dws-menu ol{
+				list-style: none;
+			}
+			.dws-menu > ul{
+				display: flex;
+ 				justify-content: left;
+			}
+			.dws-menu > ul li{
+				position: relative;
+				border-right: 1px solid #c7c8ca;
+			}
+			.dws-menu > ul li:first-child{
+				border-left: 1px solid #b2b3b5;
+			}
+			.dws-menu > ul li:last-child {
+				border-right: 1px solid #babbbd;
+			}
+			.dws-menu > ul li > a i.fa{
+				position: absolute;
+				top: 15px;
+				left: 12px;
+				font-size: 18px;
+			}
+			.dws-menu > ul li a{
+				display: block;
+				background: rgb(201,201,201); 
+				background: -moz-linear-gradient(top,  rgba(201,201,201,1) 0%, rgba(246,246,246,1) 2%, rgba(196,197,199,1) 98%, rgba(117,117,119,1) 100%);
+				background: -webkit-linear-gradient(top,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%);
+				background: linear-gradient(to bottom,  rgba(201,201,201,1) 0%,rgba(246,246,246,1) 2%,rgba(196,197,199,1) 98%,rgba(117,117,119,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#757577',GradientType=0 );
+
+				padding: 15px 30px 15px 40px;
+				font-size: 14px;
+				color: #454547;
+				text-decoration: none;
+				text-transform:uppercase;
+				transition: all 0.3s ease;
+			}
+			.dws-menu li a:hover{
+
+				background: rgb(224,225,229);
+				background: -moz-linear-gradient(top,  rgba(224,225,229,1) 0%, rgba(69,69,71,1) 2%, rgba(69,69,71,1) 98%, rgba(224,225,229,1) 100%);
+				background: -webkit-linear-gradient(top,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%);
+				background: linear-gradient(to bottom,  rgba(224,225,229,1) 0%,rgba(69,69,71,1) 				   2%,rgba(69,69,71,1) 98%,rgba(224,225,229,1) 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e1e5',
+				endColorstr='#e0e1e5',GradientType=0 );
+
+				color: #ffffff;
+				box-shadow: 1px 5px 10px -5px black;
+				transition: all 0.3s ease;
+			}
+			.dws-menu li ul {
+				position: absolute;
+				min-width: 150px;
+				display: none;
+			}
+			.dws-menu li > ul li{
+				border: 1px solid #c7c8ca;
+			}
+			.dws-menu li > ul li a{
+				padding: 10px;
+				text-transform: none;
+				background: #e4e4e5;
+			}
+			.dws-menu li > ul li ul{
+				position: absolute;
+				right: -150px;
+				top: -30;
+			}
+			.dws-menu li:hover > ul{
+				display: block;
+			}
+			#contactus {
+ 				background-color: #7c807f;    
+ 				width: 100%;
+ 				height: 150px;
+ 				margin-top: 700px;
+			}
+			#divimg {
+				width: 100%;
+ 				height: 400px;
+ 				margin-top: -50px;
+				background: #0349e8;
+				
+ 			}
+			
+			#email {
+				margin-top: -116px;
+				margin-left: -650px;
+			}
+			
+			
+			
+			
+        </style>
+			
+			
+		
+		
+	</head>		
+	<body>
+
+
+<header>
+  <nav class="dws-menu">
+    <ul>
+      <li><a href=""><i class="fa fa-home"></i>Home</a>
+			<ul>
+				<li><a href="SIGN%20IN_SIGN%20UP.html">Sign In/Sign Up</a></li>
+		  </ul>
+		</li>
+      <li><a href=""><i class="fa fa-cogs"></i>Games</a>
+        <ul>
+          <li><a href="chess/JSChess.html">Chess</a></li>
+          <li><a href="">Chekers</a></li>
+        </ul>
+      </li>
+      	<li><a href="#bottom"><i class="fa fa-th-list"></i>Contact Us</a>
+		</li>
+    </ul>
+  </nav>
+	<div id="divimg"><center><h1 style="margin-top: 4px;">Welcome!</h1></center>
+	</div>
+	<div id="aboutus1"></div> <div id="aboutus2"></div>
+	
+</header>
+		<div id="contactus"><h2><b style="margin-left: 5px;">Contact Us</b></h2>
+			<small><h2 style="margin-left: 5px;">Phone</h2></small>
+			<small><h3 style="margin-left: 5px;">+420770664577</h3></small>
+			<small><h2 style="margin-left: 5px;">Email</h2></small>
+			<small><h3 id="bottom" style="margin-left: 5px;">html1cloud@gmail.com</h3></small>	
+			<center id="email"><h2><b>Do you have a problem?</b></h2>	
+			<a href="email.html" style="color: #000000; text-decoration: none;"><small><h3 id="bottom" style="margin-left: -150px;">Write us an email!</h3></small></a>
+
+				
+			</center>
+		</div>
+
+		
+		
+	</body>
+</html>
