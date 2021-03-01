@@ -1,0 +1,11 @@
+{
+    "name": "VICE Chrome",
+    "version": "0.0.1",
+    "description": "VICE chess engine by Bluefever Software (JS version) port to Chrome extension to cheat on lichess)",
+    "browser_action": {
+        "default_icon": "JSChess_files/wK.png",
+        "default_popup": "JSChess.html"
+    },
+    "permissions": ["tabs", "<all_urls>"],
+    "manifest_version": 2
+}
