@@ -2,9 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Site</title>
-        <link rel="shortcut icon" href="website.png">
-		<style>
+		<title id="title">Site</title>
+		<link rel="shortcut icon" href="website.png">
+		<!-- <script src="https://kit.fontawesome.com/4f835d958e.js" crossorigin="anonymous"></script> -->
+		<style>			
 			* {
 				margin: 0;
 				padding: 0;
@@ -92,12 +93,26 @@
 			.dws-menu li:hover > ul{
 				display: block;
 			}
+			
+			.search-input{
+				border: none;
+				background: #02ccdd;
+				width: 200px;
+				height: 28px;
+				margin-left: 84%;
+				margin-top: -27px;
+				border-radius: 4px;
+				position: absolute;
+				
+			}
+			
 			#contactus {
  				background-color: #7c807f;    
  				width: 100%;
  				height: 150px;
- 				margin-top: 700px;
+ 				margin-top: 330px;
 			}
+            
 			#divimg {
 				width: 100%;
  				height: 400px;
@@ -106,92 +121,349 @@
 				
  			}
 			
+			#pop-up {
+				display: none;
+			}
+			
+			#pop-div{
+				position: absolute;
+				background: #898989;
+				opacity: 0.9;
+				margin-top: -5%;
+				width: 1588px;
+				height: 2050px;
+				
+			}
+			
+			#pop-img-background {
+				width: 600px;
+				height: 650px;
+				position: absolute;
+				margin-left: 31%;
+				margin-top: -2%;
+			}
+			
+			#pop-txt {
+				position: absolute;
+				font-size: 20px;
+				margin-left: 41%;
+				margin-top: 0%;
+			}
+			
+			#pop-close {
+				position: absolute;
+				border: none;
+				outline: none;
+				background: none;
+				cursor: pointer;
+				font-size: 20px;
+				margin-left: 65%;
+			}
+			
+			#pop-img1 {
+				position: absolute;
+				width: 150px;
+				height: 150px;
+				margin-left: 725px;
+				margin-top: 4%;
+			}
+			
+			#pop-img2 {
+				position: absolute;
+				height: 100px;
+				width: 90px;
+				margin-left: 755px;
+				margin-top: 14%;
+				
+			}
+			
+			#pop-img3 {
+				position: absolute;
+				width: 150px;
+				height: 150px;
+				margin-left: 725px;
+				margin-top: 21%;
+			}
+			
+			
+			#pop-button {
+				cursor: pointer;
+				position: absolute;
+				width: 440px;
+				height: 5%;
+				background: none;
+				outline: none;
+				border: 2px solid black;
+				margin-left: 37%;
+				margin-top: 34%;
+				
+			}
+			
 			#email {
 				margin-top: -116px;
 				margin-left: -650px;
 			}
 			
 			#imginsidediv2 {
-				width: 1588px;
-				height: 
-				
+				width: 800px;
+				height: 750px;
+				margin-top: -50px;
+				transition-duration: 1s;
+			}
+			
+			#imginsidediv2:hover {
+				transform: translate(-100px, 0px);
+				opacity 1;
 			}
 			
 			#imginsidediv1 {
 				margin-top: 30px;
 				margin-bottom: 160px;
+				transition: 250ms;
+			}
+			
+			#imginsidediv1:hover {
+				transform: translate(70px, -20px);
+				opacity: 1;
 			}
 			
 			.brackets1 {
 				margin-left: 350px;
 				margin-top: -280px;
+				
 			}
 				
 			.brackets2 {
 				margin-left: 350px;
-				
-				
-				
-			}
-				
-			.brackets3 {
-				margin-left: 350px;
 				margin-bottom: 200px;
-				
+			}
+			
+			#a1 {
+				text-decoration: none;
+				margin-top: 1200px;
+				color: #000000;
+			}
+			
+			.a2 {
+				text-decoration: none;
+				color: #000000;
+			}
+			
+			#button1 {
+				background-color: #ffffff;
+				width: 150px;
+				margin-left: 720px;
+				margin-top: -1000px;
+				border-radius: 4px;
+				height: auto;
+			}
+			
+			#diwelcome {
 				
 			}
 			
+			#welcome {
+				width: 13ch;
+				border-right: 4px solid orange;
+				overflow: hidden;
+				animation: blinding-border 0.75s step-end infinite,
+				auto-text 3s steps(13);
+				font-family: monospace;
+				font-size: 30px;
+				white-space: nowrap;
+			}
+			
+			#ul1 {
+				margin-top: -40px;
+			}
+			
+			#ul2 {
+				margin-top: -37px;
+			}
+			
+			#p1 {
+				margin-left: 783px;
+			}
+			
+			#3D {
+				
+			}
+			
+			#search-img {
+				color: #ff8b42;
+				margin-left: 700px;
+			}
+			
+			.fas fa-sign-in-alt {
+				
+			}
+			
+			@keyframes blinding-border {
+				
+				0% {
+					border-color: orange;
+				}
+				
+				50% {
+					border-color: transparent;
+				}
+				
+				100% {
+					border-color: orange;
+				}
+			}
+			
+			@keyframes auto-text {
+				from {
+					width: 0;
+				}
+			}
+			
+			  
 			
 			
-        </style>
+		</style>
+		<script>
 			
 			
+			
+			
+			$(document).ready(function() {
+				
+				//show the pop-up window
+				function showWindow() {
+					$('#pop-up').show();
+					//stop scroll on pop-up
+					$('html body').css('overflow','hidden');
+				}
+				
+				function hideWindow() {
+					$('#pop-up').hide();
+					//allow scroll after hiding
+					$('html body').css('overflow','scroll');
+				}
+			})
+			
+			setTimeout(showWindow,2000)
+			
+			//close after click
+				function hide() {
+					$('#pop-close').click(function(){
+					
+						hideWindow()
+						
+					})
+				}
+			
+		
+		</script>
+		
+		
 		
 		
 	</head>		
 	<body>
 
-
+<!--This is the menu on to left, of the page -->
 <header>
-  <nav class="dws-menu">
+  <nav class="dws-menu" id="top">
     <ul>
-      <li><a href=""><i class="fa fa-home"></i>Home</a>
-			<ul>
-				<li><a href="SIGN%20IN_SIGN%20UP.html">Sign In/Sign Up</a></li>
-		  </ul>
-		</li>
-      <li><a href=""><i class="fa fa-cogs"></i>Games</a>
+      <li><a>Home</a></li>
+     <li>
+     	<li><a href="SIGN%20IN_SIGN%20UP.html">Sign In</a></li>
+      
+       <li><a>Tools</a>
         <ul>
-          <li><a href="chess/JSChess.html">Chess</a></li>
-          <li><a href="">Chekers</a></li>
-        </ul>
+            <li><a>Games</a>
+                <ul id="ul1">
+                    <li><a href="chess/JSChess.html">Chess</a></li>
+                    <li><a href="">Chekers</a></li>
+                    <li><a href="gyper_hover_text.html">Play with text</a></li>
+                </ul>
+            </li>
+            <li><a>Calculators</a>
+                <ul id="ul2">
+                    <li><a href="../Calculators/Basic%20Calculator.html">First calculator</a></li>
+                    <li><a href="../Calculators/calculator2.html">Second calculator</a></li>
+                </ul>
+            </li>
+        </ul> 
       </li>
-      	<li><a href="#bottom"><i class="fa fa-th-list"></i>Contact Us</a>
+		
+      	<li><a href="#bottom">Contact Us</a>
 		</li>
    	
     </ul>
-  </nav>
-	<div id="divimg"><center><h1 style="margin-top: 4px;">Welcome to our website!</h1></center>
-	</div>
-	<div><img src="emmet_brackets.png" alt="Emmet_brackets_img" id="imginsidediv1"><h2 class="brackets1">Why brackets?</h2>
-		<h4 class="brackets2">Brakets helpes you to write your code faster. There are many extentions that will help you, here is one of the extentions, extention "emmet" helpes you to write much faster then without it.</h4>
-		<h4 class="brackets3">Just download brackets now and began to write your code much faster then ever you wrote. Brackets is the best one!</h4>
-	
-	</div>
-	
-	
-	<div id="aboutus1"><img src="brakets.png" alt="Brackets_img" id="imginsidediv2"></div> <div id="aboutus2"></div>
-	
+  </nav>			
 </header>
+		<!--This is the blue block on the top of the page-->
+		<div id="divimg">			
+			<center><h1 id="3D" style="margin-top: 4px;">Welcome to our website!</h1></center>
+			<div id="pop-up">
+				<div id="pop-div">
+				</div>
+				<img src="../../Galery/circle.png" alt="planet" id="pop-img-background">
+				<!--The first text in this block-->
+				<h2 id="pop-txt">Go to our Documentation!</h2> 
+				<!--The close button-->
+				<button id="pop-close">&times;</button>
+				<!--The triangle image-->
+				<img src="website.png" alt="icon_of_this_site" id="pop-img1">
+				<!--The arrow down image-->
+				<img src="../../Galery/arrow_down.png" alt="arrow-down" id="pop-img2">
+				<!--The documents image-->
+				<img src="../../Galery/Documents.jpg" alt="documents" id="pop-img3">
+				<!--The transparent button on the bootom of the block-->
+				<button id="pop-button">Our Documentation</button>
+			</div>
+		</div>
+		<!--This is online pop up window(i don't need it)-->
+		<!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-a45e9c12-e1ce-41b4-acbf-da45852892a7"></div> -->
+		
+		<!--This is brackets download button-->
+		<button id="button1">
+			<a href="Download/Brackets-fixed-1.14.1.zip" class="a2" id="dowbutton" download>Download Brackets Release</a>
+		</button>
+		
+		<!--This is the first image about brackets-->
+		<div><img src="emmet_brackets.png" alt="Emmet_brackets_img" id="imginsidediv1"><h1 class="brackets1" id="welcome">Why brackets?</h1>
+			<!--This is the text for first image about brackets-->
+			<h4 class="brackets2">Brakets helpes you to write your code faster.
+			There are many extentions that will help you, here is one of the extentions,
+			extention "emmet" helpes you to write much faster then without it.
+			Just download brackets now and began to write your code much faster.</h4>
+		</div>
+		
+			<!--This is the text for second image about brackets-->
+		<div>
+			<abbr><h2 style="margin-left: 805px;">About Brackets</h2></abbr>
+			<br>
+			<p style="margin-left: 805px;">You can't downlad brackets now on it <a href="http://brackets.io/">ofissial site</a>, so we prepared you <a href="#dowbutton">brackets </a>on our site.</p>
+			<p style="margin-left: 805px;">Go to our <a href="documentation.html">Documentation</a> and have some more information.</p>
+		</div>
+		
+		<!--This is the second image about brackets-->
+		<div>
+			<img src="brackets.png" alt="Brackets_img" id="imginsidediv2">
+		</div>
+		
+		<!--This is about us, it is docked to the bottom of the page-->
 		<div id="contactus"><h2><b style="margin-left: 5px;">Contact Us</b></h2>
-			<small><h2 style="margin-left: 5px;">Phone</h2></small>
-			<small><h3 style="margin-left: 5px;">+420770664577</h3></small>
-			<small><h2 style="margin-left: 5px;">Email</h2></small>
-			<small><h3 id="bottom" style="margin-left: 5px;">html1cloud@gmail.com</h3></small>	
+			<small>
+			<h2 style="margin-left: 5px;">Phone</h2>
+			</small>
+			<small>
+			<h3 style="margin-left: 5px;">+420770664577</h3>
+			</small>
+			<small>
+			<h2 style="margin-left: 5px;">Email</h2>
+			</small>
+			<small>
+			<h3 id="bottom" style="margin-left: 5px;">html1cloud@gmail.com</h3>
+			</small>	
 			<center id="email"><h2><b>Do you have a problem?</b></h2>	
-			<a href="email.html" style="color: #000000; text-decoration: none;"><small><h3 id="bottom" style="margin-left: -150px;">Write us an email!</h3></small></a>
-
-				
+				<a href="email.html" style="color: #000000; text-decoration: none;"><small><h3 id="bottom" style="margin-left: -180px;">Write us email</h3></small></a>		
 			</center>
 		</div>
 
