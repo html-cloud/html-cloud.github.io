@@ -59,6 +59,15 @@
 			}
 		</style>
 		<script>
+			var pron = prompt("Please enter password to unlock this site.", 'My name')
+			
+			while (pron == "" || pron != "Saidakhmad") {
+				var pron = prompt("Please enter password to unlock this site.")
+			}
+			
+			if (pron == "Saidakhmad") {
+				
+			}
 			var inone = $('#input1')
 			var intwo = $('#input2')
 			function input1() {
@@ -81,14 +90,14 @@
 	</head>
 	<body>
 		<center>
-			<h1 id="h1">Ваш пол ...</h1>
+			<h1 id="h1">Секрет!</h1>
 			<ul class="ul">
 				<li><input type="button" id="input1" onclick="input1()"></li>
-				<li><h2 id="h2">мужской</h2></li>
+				<li><h2 id="h2">Мой секрет</h2></li>
 			</ul>
 			<ul class="ul">
 				<li><input type="button" id="input2" onclick="input2()"></li>
-				<li><h2 id="h2">женский</h2></li>
+				<li><h2 id="h2">Ваш секрет</h2></li>
 			</ul>
 			<hr>
 			<h2 id="h22"></h2>
