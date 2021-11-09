@@ -143,10 +143,10 @@ span:before {
 			}
 		</style>
 		<script>
-			var pron = prompt("Please enter password to unlock this site.", 'Мое имя')
+			var pron = prompt("Задайте пароль чтобы разблокировать сайт.", 'Мое имя(подсказка)')
 			
 			while (pron != "Saidakhmad") {
-				var pron = prompt("Please enter password to unlock this site.")
+				var pron = prompt("Задайте пароль чтобы разблокировать сайт.")
 			}
 			
 			if (pron == "Saidakhmad") {
@@ -180,7 +180,7 @@ span:before {
 				elem.parentNode.removeChild(elem);
 				h23.prepend("✅ Ваш ответ правильный!");
 				h24.prepend("(Посмотрите в консоль)")
-				console.log("Я мусульманин")
+				console.log("")
 				input2.isRun = true;
 			}
 		</script>
